@@ -144,3 +144,22 @@ predict.lm(model.2,newData, interval="prediction")
 fit is the predicted SIMS score when you have a GRIP strength 94 and ARM strength of 88.
 
 The lower and upper are 95% confidence intervals for predicted SIMS score when the GRIP score is 94 and ARM strength of 88.
+
+## Inferential tests 
+
+This is the inferential tests to compare models.
+
+The test is anova 
+
+$H_0$: Theres no difference in how well each model fit the data between models (model2,model3)
+
+$H_A$:  Theres is a difference in how well each model fit the data between models (model2,model3)
+
+```{r}
+anova(model.1,model.2)
+```
+
+The P- value is 0.00004994 which is very low .
+
+We reject the null hypothesis because the p value is too low. There is a difference between model2, and model3. We have evidence that model3 is btter than model2.
+
